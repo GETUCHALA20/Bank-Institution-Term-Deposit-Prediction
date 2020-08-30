@@ -56,6 +56,7 @@ class Preprocess:
         x_scaled = min_max_scaler.fit_transform(x)
         df_to_scale = pd.DataFrame(x_scaled, columns=df_to_scale.columns)
         return df_to_scale
+
     
 
 if __name__ == '__main__':
@@ -100,7 +101,7 @@ if __name__ == '__main__':
        'day_of_week_thu', 'day_of_week_tue', 'day_of_week_wed',
        'poutcome_nonexistent', 'poutcome_success']
 
-    X = data[features]
+    X = data.drop('y',axis=1)
     y = data[['y']]
     columns_to_scale= ['age','campaign','cons.conf.idx','cons.price.idx','duration','emp.var.rate','euribor3m','nr.employed',
                    'pdays','previous']
