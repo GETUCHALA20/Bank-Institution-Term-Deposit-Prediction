@@ -14,4 +14,4 @@ Built 3 classification model in Python:
 - Multi-Layer Perceptron
 
 ### Result
-
+Choosing the right model is always a difficult task to do. Since our target class is imbalanced accuracy might not be the right metric to evaluate our model. In this case, It is better to use F1-score as our metrics. Depending on this we can say our XGBoost Classifier Model performed better than the other two.
